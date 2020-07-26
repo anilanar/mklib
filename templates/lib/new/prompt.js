@@ -20,15 +20,11 @@ module.exports = {
     ]);
     return {
       ...result,
-      mklib: {
-        version: getVersion(),
-      },
+      mklib: pkg(),
     };
   },
 };
 
-function getVersion() {
-  return process.env.MKLIB_DEBUG
-    ? `file://${path.resolve(__dirname, "../../../")}`
-    : require(path.resolve(__dirname, "../../../package.json")).version;
+function pkg() {
+  return require(path.resolve(__dirname, "../../../package.json"));
 }

@@ -11,6 +11,6 @@ sh: cd <%= name %> && yarn
   "scripts": {
   },
   "devDependencies": {
-    "mklib": "<%= mklib.version %>"
+    "mklib": "<%= mklib.name %>@^<%= mklib.version %>"
   }
 }
