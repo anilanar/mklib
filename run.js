@@ -4,7 +4,7 @@ const p = require("path");
 
 execa
   .command(
-    `yarn nps -c ${p.resolve(__dirname, "./scripts.js")} ${process.argv
+    `nps -c ${p.resolve(__dirname, "./scripts.js")} ${process.argv
       .slice(2)
       .join(" ")}`,
     {
