@@ -1,0 +1,41 @@
+{
+  "name": "@anilanar/mklib",
+  "description": "My lib boilerplate generator + tooling for JS/TS libs",
+  "version": "1.0.0",
+  "bin": "./run.js",
+  "author": "Anil Anar <mail@anilanar.me>",
+  "repository": "github:anilanar/mklib",
+  "license": "MIT",
+  "files": [
+    "run.js",
+    "scripts.js",
+    "commit.js",
+    "templates"
+  ],
+  "scripts": {
+    "dbg": "MKLIB_DEBUG=1 nps -c ./scripts.js"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-typescript": "^7.10.4",
+    "@typescript-eslint/eslint-plugin": "^3.7.0",
+    "@typescript-eslint/parser": "^3.7.0",
+    "commitizen": "^4.1.2",
+    "cz-lerna-changelog": "^2.0.3",
+    "eslint": "^7.5.0",
+    "execa": "^4.0.3",
+    "hygen": "^6.0.4",
+    "jest": "^26.1.0",
+    "lerna": "^3.22.1",
+    "nps": "^5.10.0",
+    "prettier": "^2.0.5",
+    "semantic-release": "^15.8.0",
+    "shelljs": "^0.8.4",
+    "typescript": "^3.9.7"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
