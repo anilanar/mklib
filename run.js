@@ -4,9 +4,10 @@ const p = require("path");
 
 execa
   .command(
-    `nps -c ${p.resolve(__dirname, "./scripts.js")} ${process.argv
-      .slice(2)
-      .join(" ")}`,
+    `${path.resolve(__dirname, "./node_modules/.bin/nps")} -c ${p.resolve(
+      __dirname,
+      "./scripts.js"
+    )} ${process.argv.slice(2).join(" ")}`,
     {
       stdio: "inherit",
     }
