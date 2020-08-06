@@ -22,9 +22,9 @@ const version = `GH_TOKEN=$GHT ${bin(
   "lerna"
 )} version --conventional-commits --create-release github`;
 
-const version_pre = `${version} --conventional-prerelease"`;
+const version_pre = `${version} --conventional-prerelease`;
 
-const version_grad = `${version} --conventional-graduate"`;
+const version_grad = `${version} --conventional-graduate`;
 
 const publish = `${bin("lerna")} publish from-git`;
 
