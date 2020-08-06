@@ -4,8 +4,8 @@ sh: cd <%= name %> && yarn
 ---
 {
   "name": "<%= name %>",
-  "homepage": "https://github.com/<%= github %>",
-  "repository": "github:<%= github %>",
+  "homepage": "<%= homepage %>",
+  "repository": "<%= repository %>",
   "private": true,
   "workspaces": ["packages/*"],
   "scripts": {

@@ -20,11 +20,8 @@ module.exports = {
     ]);
     return {
       ...result,
-      mklib: pkg(),
+      homepage: `https://github.com/${result.github}`,
+      repository: `https://github.com/${result.github}.git`,
     };
   },
 };
-
-function pkg() {
-  return require(path.resolve(__dirname, "../../../package.json"));
-}
