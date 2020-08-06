@@ -4,7 +4,7 @@ const path = require("path");
 const bootstrap = require("commitizen/dist/cli/git-cz").bootstrap;
 
 bootstrap({
-  cliPath: path.join(__dirname, "./node_modules/commitizen"),
+  cliPath: path.dirname(require.resolve("commitizen/package.json")),
   config: {
     path: "cz-lerna-changelog",
   },
