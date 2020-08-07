@@ -9,6 +9,7 @@ sh: cd <%= name %> && yarn
   "private": true,
   "workspaces": ["packages/*"],
   "scripts": {
+    "prepare": "mklib prepare"
   },
   "devDependencies": {
     "<%= mklib.name %>": "^<%= mklib.version %>"
