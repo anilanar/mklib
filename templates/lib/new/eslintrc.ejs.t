@@ -1,5 +1,5 @@
 ---
-to: <%= name %>/.eslintrc.js
+to: <%- name %>/.eslintrc.js
 ---
 module.exports = {
   root: true,

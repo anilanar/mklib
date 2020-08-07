@@ -1,5 +1,5 @@
 ---
-to: <%= name %>/config/tsconfig.es.json
+to: <%- name %>/config/tsconfig.es.json
 ---
 {
   "compilerOptions": {

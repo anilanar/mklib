@@ -1,5 +1,5 @@
 ---
-to: <%= name %>/.editorconfig
+to: <%- name %>/.editorconfig
 ---
 root = true
 

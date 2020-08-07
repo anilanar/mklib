@@ -1,5 +1,5 @@
 ---
-to: <%= name %>/.gitignore
+to: <%- name %>/.gitignore
 ---
 node_modules
 dist

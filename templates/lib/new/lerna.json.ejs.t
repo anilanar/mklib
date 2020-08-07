@@ -1,5 +1,5 @@
 ---
-to: <%= name %>/lerna.json
+to: <%- name %>/lerna.json
 ---
 {
   "version": "0.0.0",

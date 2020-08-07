@@ -1,5 +1,5 @@
 ---
-to: <%= name %>/config/tsconfig.cjs.json
+to: <%- name %>/config/tsconfig.cjs.json
 ---
 {
   "extends": "./tsconfig.es.json",
