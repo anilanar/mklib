@@ -22,6 +22,11 @@ module.exports = {
       ...result,
       homepage: `https://github.com/${result.github}`,
       repository: `https://github.com/${result.github}.git`,
+      mklib: mklib(),
     };
   },
 };
+
+function mklib() {
+  return require(path.resolve(__dirname, "../../../package.json"));
+}
