@@ -1,7 +1,7 @@
 {
   "name": "@anilanar/mklib",
   "description": "My lib boilerplate generator + tooling for JS/TS libs",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "bin": "./run.js",
   "author": "Anil Anar <mail@anilanar.me>",
   "repository": "github:anilanar/mklib",
