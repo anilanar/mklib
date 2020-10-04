@@ -28,6 +28,6 @@ to: <%= root %>/package.json
     "test": "jest"
   },
   "publishConfig": {
-    "access": "<%= private ? 'private' : 'public' %>"
+    "access": "<%= private ? 'restricted' : 'public' %>"
   }
 }
