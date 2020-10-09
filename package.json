@@ -24,7 +24,6 @@
     "@typescript-eslint/parser": "^4.3.0",
     "babel-jest": "^26.3.0",
     "commitizen": "^4.2.1",
-    "cz-lerna-changelog": "^2.0.3",
     "eslint": "^7.10.0",
     "execa": "^4.0.3",
     "hygen": "^6.0.4",
@@ -32,11 +31,18 @@
     "lerna": "^3.22.1",
     "nps": "^5.10.0",
     "prettier": "^2.0.5",
-    "semantic-release": "^15.8.0",
     "shelljs": "^0.8.4",
     "typescript": "^4.0.3"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "3.3.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
