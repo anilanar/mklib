@@ -1,5 +1,5 @@
 ---
-to: <%= root %>/babel.config.js
+to: <%- root %>/babel.config.js
 ---
 module.exports = {
   presets: [

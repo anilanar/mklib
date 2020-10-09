@@ -1,3 +1,3 @@
 ---
-to: <%= root %>/src/index.ts
+to: <%- root %>/src/index.ts
 ---

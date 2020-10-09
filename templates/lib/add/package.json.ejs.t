@@ -1,20 +1,20 @@
 ---
-to: <%= root %>/package.json
+to: <%- root %>/package.json
 ---
 {
-  "name": "<%= name %>",
+  "name": "<%- name %>",
   "version": "0.0.0",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
   "types": "dist/es/index.d.ts",
   "sideEffects": false,
-  "homepage": "<%= pkg.homepage %>",
+  "homepage": "<%- pkg.homepage %>",
   "repository": {
     "type": "git",
-    "url": "<%= pkg.repository %>",
-    "directory": "<%= root %>"
+    "url": "<%- pkg.repository %>",
+    "directory": "<%- root %>"
   },
-  "author": "<%= pkg.author %>",
+  "author": "<%- pkg.author %>",
   "license": "MIT",
   "files": [
     "dist/es",
@@ -28,6 +28,6 @@ to: <%= root %>/package.json
     "test": "jest"
   },
   "publishConfig": {
-    "access": "<%= private ? 'restricted' : 'public' %>"
+    "access": "<%- private ? 'restricted' : 'public' %>"
   }
 }
