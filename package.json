@@ -1,7 +1,7 @@
 {
   "name": "@anilanar/mklib",
   "description": "My lib boilerplate generator + tooling for JS/TS libs",
-  "version": "2.0.1",
+  "version": "0.0.0-development",
   "bin": "./run.js",
   "author": "Anil Anar <mail@anilanar.me>",
   "repository": "github:anilanar/mklib",
@@ -13,7 +13,8 @@
     "templates"
   ],
   "scripts": {
-    "dbg": "MKLIB_DEBUG=1 nps -c ./scripts.js"
+    "dbg": "MKLIB_DEBUG=1 nps -c ./scripts.js",
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
     "@babel/cli": "^7.11.6",
@@ -42,5 +43,8 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "devDependencies": {
+    "semantic-release": "^17.1.2"
   }
 }
