@@ -12,7 +12,7 @@ to: <%- packageDir %>/package.json
   "repository": {
     "type": "git",
     "url": "<%- rootPkg.repository %>",
-    "directory": "<%- subdir %>"
+    "directory": "<%- packageDir %>"
   },
   "author": "<%- rootPkg.author %>",
   "license": "MIT",
