@@ -1,5 +1,5 @@
 ---
-to: <%- root %>/tsconfig.cjs.json
+to: <%- packageDir %>/tsconfig.cjs.json
 ---
 {
   "extends": "../../config/tsconfig.cjs.json",

@@ -1,5 +1,5 @@
 ---
-to: <%- root %>/package.json
+to: <%- packageDir %>/package.json
 ---
 {
   "name": "<%- name %>",

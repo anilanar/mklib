@@ -20,7 +20,7 @@ module.exports = {
     return {
       ...result,
       rootPkg: require(path.resolve(process.cwd(), "./package.json")),
-      subdir: subpath(result.name),
+      packageDir: subpath(result.name),
       mklib: mklib(),
     };
   },

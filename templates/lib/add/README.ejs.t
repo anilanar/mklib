@@ -1,4 +1,4 @@
 ---
-to: <%- root %>/README.md
+to: <%- packageDir %>/README.md
 ---
 See the [homepage](<%- pkg.homepage %>).
