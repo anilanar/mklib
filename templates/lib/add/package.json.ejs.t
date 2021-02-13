@@ -8,13 +8,13 @@ to: <%- root %>/package.json
   "module": "dist/es/index.js",
   "types": "dist/es/index.d.ts",
   "sideEffects": false,
-  "homepage": "<%- pkg.homepage %>",
+  "homepage": "<%- rootPkg.homepage %>",
   "repository": {
     "type": "git",
-    "url": "<%- pkg.repository %>",
-    "directory": "<%- root %>"
+    "url": "<%- rootPkg.repository %>",
+    "directory": "<%- subdir %>"
   },
-  "author": "<%- pkg.author %>",
+  "author": "<%- rootPkg.author %>",
   "license": "MIT",
   "files": [
     "dist/es",

@@ -1,6 +1,6 @@
 const path = require("path");
 
-const root = path.resolve(__dirname, "../../../");
+const rootDir = path.resolve(__dirname, "../../../");
 
 module.exports = {
   prompt: async ({ prompter, args }) => {
@@ -19,14 +19,15 @@ module.exports = {
 
     return {
       ...result,
-      root: subpath(result.name),
-      pkg: pkg(),
+      rootPkg: require(path.resolve(process.cwd(), "./package.json")),
+      subdir: subpath(result.name),
+      mklib: mklib(),
     };
   },
 };
 
-function pkg() {
-  return require(path.resolve(root, `./package.json`));
+function mklib() {
+  return require(path.resolve(rootDir, `./package.json`));
 }
 
 function subpath(name) {
