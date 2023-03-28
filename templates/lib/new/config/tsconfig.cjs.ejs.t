@@ -14,6 +14,7 @@ to: <%- name %>/config/tsconfig.es.json
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "declaration": true,
+    "skipLibCheck": true,
     "types": []
   }
 }
