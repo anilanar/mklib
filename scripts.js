@@ -1,10 +1,11 @@
-const path = require("path");
+const p = require("path");
+const { execaCommandSync } = require('execa')
 
-const new_ = `HYGEN_TMPLS=${path.resolve(__dirname, "./templates")} ${bin(
+const new_ = `HYGEN_TMPLS=${path("./templates")} ${bin(
   "hygen"
 )} lib new`;
 
-const add = `HYGEN_TMPLS=${path.resolve(__dirname, "./templates")} ${bin(
+const add = `HYGEN_TMPLS=${path("./templates")} ${bin(
   "hygen"
 )} lib add`;
 
@@ -16,7 +17,7 @@ const lint = `${bin("lerna")} run lint`;
 
 const test = `${bin("lerna")} run test`;
 
-const commit = `${path.resolve(__dirname, "./commit.js")}`;
+const commit = `${path("./commit.js")}`;
 
 const version = `GH_TOKEN=$GHT ${bin(
   "lerna"
@@ -47,5 +48,11 @@ module.exports = {
 };
 
 function bin(name) {
-  return path.resolve(__dirname, "node_modules/.bin", name);
+  return execaCommandSync(`npx which ${name}`, {
+    cwd: path("."),
+  })
+}
+
+function path(...paths) {
+  return p.resolve(__dirname, ...paths);
 }
