@@ -10,9 +10,8 @@
   "repository": "github:anilanar/mklib",
   "license": "MIT",
   "files": [
-    "run.js",
-    "scripts.js",
-    "commit.js",
+    "run.mjs",
+    "commit.mjs",
     "templates"
   ],
   "scripts": {
