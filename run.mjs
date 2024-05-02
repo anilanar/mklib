@@ -88,9 +88,10 @@ program
 program
   .command("commit")
   .helpOption(false)
+  .allowUnknownOption()
   .action(
-    ignoreError(async () => {
-      await commit();
+    ignoreError(async (_, cmd) => {
+      await commit(cmd.args);
     })
   );
 
