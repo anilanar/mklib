@@ -15,7 +15,6 @@
     "templates"
   ],
   "scripts": {
-    "dbg": "MKLIB_DEBUG=1 nps -c ./scripts.js",
     "semantic-release": "semantic-release"
   },
   "dependencies": {

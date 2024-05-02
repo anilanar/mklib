@@ -137,6 +137,10 @@ program
     })
   );
 
+passthrough("tsc");
+passthrough("eslint");
+passthrough("jest");
+
 program.parse();
 
 function path(p) {
@@ -148,6 +152,21 @@ async function bin(name) {
     cwd: path("."),
   });
   return cmd.stdout;
+}
+
+function passthrough(cmdName) {
+  program
+    .command(cmdName)
+    .helpOption(false)
+    .allowUnknownOption()
+    .action(
+      ignoreError(async (_, cmd) => {
+        const binPath = await bin(cmdName);
+        await spawn(binPath, [...cmd.args], {
+          stdio: "inherit",
+        });
+      })
+    );
 }
 
 function spawn(...args) {

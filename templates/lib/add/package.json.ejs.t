@@ -21,11 +21,11 @@ to: <%- packageDir %>/package.json
     "dist/cjs"
   ],
   "scripts": {
-    "build": "tsc",
-    "build:cjs": "tsc -b tsconfig.cjs.json",
+    "build": "mklib tsc",
+    "build:cjs": "mklib tsc -b tsconfig.cjs.json",
     "clean": "rm -rf dist",
-    "lint": "eslint src --ext .ts",
-    "test": "jest"
+    "lint": "mklib eslint src --ext .ts",
+    "test": "mklib jest"
   },
   "publishConfig": {
     "access": "<%- private ? 'restricted' : 'public' %>"
