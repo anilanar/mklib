@@ -1,11 +1,9 @@
 #!/usr/bin/env node
 import { spawn as spawn_ } from "node:child_process";
-import { execaCommand, $ } from "execa";
+import { execaCommand } from "execa";
 import { URL } from "url";
 import { program } from "commander";
 import { commit } from "./commit.mjs";
-
-// program.enablePositionalOptions();
 
 program
   .command("new", {})
