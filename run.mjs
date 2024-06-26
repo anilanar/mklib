@@ -173,14 +173,14 @@ function passthrough(cmdName) {
 function spawn(...args) {
   const child = spawn_(...args);
 
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     child.on("error", () => resolve);
 
     child.on("close", (code) => {
       if (code === 0) {
         resolve();
       } else {
-        reject(new Error(`child exited with code ${code}`));
+        process.exit(code);
       }
     });
   });
